@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button><!-- hacer que se vea la hamburguesa  -->
+      <ion-back-button></ion-back-button><!-- hacer que se vea la hmburguesa  -->
+    </ion-buttons>
+    <ion-title>Inicio {{ comuna }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Nombre Persona" labelPlacement="floating" placeholder="Ingrese nombre" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-button color="success" [routerLink]="['/home']">Ir al Home</ion-button>
+  <ion-button color="warning" (click)="irPagina()">Ir a Agregar {{ nombre }}</ion-button>
+</ion-content>
